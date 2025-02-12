@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --primary-color: #2874f0;
+    --secondary-color: #fff;
+    --text-color: #000;
+    --background-color: #f5f5f5;
+    --hover-color: #1e5bbf;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-padding-top: 2rem;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    color: var(--text-color);
+    background: var(--background-color);
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-color);
+    box-shadow: 0 1px 4px hsla(0, 0%, 98%, 0.1);
+    z-index: 100;
+}
+
+.main-navbar {
+    border-bottom: 1px solid #ddd;
+}
+
+.main-navbar .top-navbar {
+    background-color: var(--primary-color);
+    padding: 10px 0;
+}
+
+.main-navbar .top-navbar .brand-name {
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.main-navbar .top-navbar .nav-link {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.main-navbar .top-navbar .nav-link:hover {
+    color: var(--hover-color);
+}
+
+.main-navbar .top-navbar .dropdown-menu {
+    padding: 0;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main-navbar .top-navbar .dropdown-menu .dropdown-item {
+    padding: 8px 16px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.main-navbar .top-navbar .dropdown-menu .dropdown-item:hover {
+    background-color: var(--background-color);
+}
+
+.main-navbar .navbar {
+    padding: 0;
+    background-color: var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center; /* Center the navbar content */
+}
+
+.main-navbar .navbar .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.main-navbar .navbar .nav-item .nav-link {
+    color: var(--text-color);
+    font-size: 15px;
+    transition: color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main-navbar .navbar .nav-item .nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-item img {
+    width: 60px; /* Adjusted size */
+    height: 60px;
+    margin-bottom: 10px; /* Space between image and text */
+    transition: transform 0.3s ease;
+}
+
+.nav-item img:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Space between items */
+    max-width: 1200px; /* Maximum width for the navbar */
+    margin: 0 auto; /* Center the navbar */
+}
+
+.navbar-nav .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+    min-width: 100px; /* Minimum width for each item */
+}
+
+@media only screen and (max-width: 600px) {
+    .main-navbar .top-navbar .nav-link {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .nav-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .navbar-nav .nav-item {
+        flex: 1 1 50%; /* Two items per row on small screens */
+    }
+}
+
+/* Additional Styles for Search Bar */
+.input-group {
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.input-group input {
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.input-group button {
+    background-color: var(--secondary-color);
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-group button:hover {
+    background-color: var(--hover-color);
+}
+
+/* Additional Styles for Cart and Wishlist Icons */
+.nav-link i {
+    margin-right: 5px;
+    font-size: 18px;
+}
+
+/* Additional Styles for Dropdown Icons */
+.dropdown-item i {
+    margin-right: 10px;
+    font-size: 16px;
+}
